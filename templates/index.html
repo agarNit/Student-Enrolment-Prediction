@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Student Enrolment Predictor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css10/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">Student Enrolment Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Student dropping out of college.
+        <br>
+        </h5>
+      </div>
+
+    <div class="row">
+    <form action='/predict' method="post" class="col s20">
+      <div class="row">
+
+        <div class="input-field col s10">
+          <label for="add"><b>Application Decision Difference</b></label>
+          <br>
+          <input id="add" name="add" placeholder="Enter the difference of days between the date of application and date of application submission" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="first_generation"><b>First Generation </b></label>
+          <br>
+          <input id="first_generation" name="first_generation" placeholder="Enter 0 if your parents have a degree else enter 1"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="Gender"><b>Gender </b></label>
+          <br>
+          <input id="gender" name="Gender" placeholder="Enter 1 for a girl and 0 for boy"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="income"><b>Income</b></label>
+          <br>
+          <input placeholder="Enter 0 for income less than 5 LPA else enter 1" name="income" id="income" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="af"><b>Application Term</b></label>
+          <br>
+          <input placeholder="Enter 1 if the application was made between Feb and June, else enter 0" name="af" id="af" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="backlogs"><b>Backlogs</b></label>
+          <br>
+          <input id="backlogs" name="backlogs" placeholder="Enter number of backlogs after multiplying by 5" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="age"><b>Age</b></label>
+          <br>
+          <input id="age" placeholder="Enter age in years" name="Age" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+            <label for="12th"><b>12th %</b></label>
+            <br>
+          <input placeholder="Enter Class 12 percentage after dividing by 3" name="12th" id="12th" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+            <label for="10th"><b>10th % </b></label>
+            <br>
+          <input id="10th" name="10th" placeholder="Enter Class 10 percentage after dividing by 3"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s10">
+          <label for="CGPA"><b>CGPA</b></label>
+          <br>
+          <input id="CGPA" name="CGPA" placeholder="Enter CGPA after multiplying by 4" type="text" class="validate">
+        </div>
+
+      </div>
+
+      <div class="row center">
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+      <h6 class="header center col s12 bold">{{pred}}</h6><br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+  
+  <footer class="page-footer orange"> 
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Nitish | Somil | Tanishq</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
