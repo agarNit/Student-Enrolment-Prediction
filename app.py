@@ -33,4 +33,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='http://student-enrolment-prediction.onrender.com', debug=True)
+    app.run(debug=True)
