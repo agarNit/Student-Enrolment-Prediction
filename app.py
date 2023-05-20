@@ -33,4 +33,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port='127.0.0.1', debug=True)
