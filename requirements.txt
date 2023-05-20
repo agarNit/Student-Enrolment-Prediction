@@ -34,7 +34,7 @@ PyJWT==2.3.0
 requests==2.25.1
 rsa==4.8
 scikit-learn==1.0.1
-scipy==1.9.3
+scipy==1.7.3
 
 sklearn==0.0.post1
 SQLAlchemy==1.4.31
