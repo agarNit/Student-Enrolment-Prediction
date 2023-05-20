@@ -11,7 +11,7 @@ def hello_world():
     return render_template('index.html')
 
 
-@app.route('/predict',methods=['POST','GET'])
+@app.route('/predict',methods=['POST'])
 def predict():
     int_features=[int(x) for x in request.form.values()]
     final=[np.array(int_features)]
